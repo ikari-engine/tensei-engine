@@ -1,11 +1,11 @@
 name: Feature
 description: Request a feature
-title: "[FEATURE] <title>"
+title: "<title>"
 labels: [enhancement]
 body:
   - type: markdown
     attributes:
-      value: Make sure to search for existing issues, discussions or pull requests before creating a new issue.
+      value: ⚠️ Make sure to search for existing issues, discussions or pull requests before creating a new issue.
   - type: textarea
     attributes:
       label: Description

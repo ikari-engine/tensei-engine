@@ -1,0 +1,11 @@
+name: Automatically approve pull requests
+on: pull_request_target
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    environment: development
+    if: github.actor == 'dependabot[bot]' || github.actor == 'lengors'
+    steps:
+      - uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}

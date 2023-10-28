@@ -13,7 +13,7 @@ jobs:
     environment: development
     permissions:
       pull-requests: write
-    if: github.actor == 'lengors'
+    if: github.actor == 'dependabot[bot]'
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:

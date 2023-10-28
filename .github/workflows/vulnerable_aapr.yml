@@ -1,19 +1,12 @@
-name: Automatically approve pull requests
+name: Automatically approve pull requests (self)
 on:
-  pull_request_target:
-    branches:
-      - main
-      - alpha
-      - beta
-      - development
-      - gh-pages
+  pull_request
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
     environment: development
     permissions:
       pull-requests: write
-    if: github.actor == 'dependabot[bot]'
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:

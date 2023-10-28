@@ -1,5 +1,12 @@
 name: Automatically approve pull requests
-on: pull_request_target
+on:
+  pull_request_target:
+    branches:
+      - main
+      - alpha
+      - beta
+      - development
+      - gh-pages
 jobs:
   auto-approve:
     runs-on: ubuntu-latest

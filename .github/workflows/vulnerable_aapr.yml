@@ -1,0 +1,13 @@
+name: Automatically approve pull requests (self)
+on:
+  pull_request
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    environment: development
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
